@@ -34,7 +34,8 @@ body {
 		padding-right: 30px;
 		a {
 			text-decoration: none;
-			font-size: 1.3rem;
+			font-size: 1.5em;
+			padding: 20px;
 		}
 	}
 
@@ -46,9 +47,65 @@ body {
 	border-bottom: 1px solid $border-color;
 	border-left: 1px solid $border-color;
 	border-right: 1px solid $border-color;
+	padding: 20px;
 	margin-top: 20px;
+	margin-left: 20px;
 
+
+	#heading-1 {
+		color: $leaseLab-blue;
+
+	}
+
+	#heading-2 {
+		font-size: 1rem;
+		font-style: italic;
+		font-weight: bold;
+		margin-left: 20px;
+
+	}
+
+	.text {
+
+	}
+
+	p {
+
+	}
+
+	.image-column {
+		position: relative;
+		float: left;
+		width: 30%;
+		margin: 5px;
+		border: 1px solid $leaseLab-blue;
+		height: 150px;
+		overflow: hidden;
+
+		img:hover {
+			visibility: visible;
+		}
+
+
+	}
+
+
+
+	.image-text{
+		position: absolute;
+		top: 10%;
+		bottom: 50%;
+		left: 25%;
+		right: 25%;
+		font-size: 1.5em;
+		color: $leaseLab-blue;
+		text-shadow: 1px #fff;
+		text-align: center;
+		visibility: hidden;
+
+	}
 }
+
 
 .sidebar {
 	grid-column: 1/2;
@@ -68,16 +125,9 @@ body {
 	}
 }
 
-.column {
-	position: relative;
-	float: left;
-	width: 20%;
-	margin: 5px;
-	border: 1px solid $leaseLab-blue;
-	height: 150px;
-	overflow: hidden;
 
-}
+
+
 
 
 

@@ -22,43 +22,57 @@ let pic2 = document.getElementById('pic2');
 let pic3 = document.getElementById('pic3');
 
 window.onload = () => {
-	// pic1.innerHTML = `<img src= ${images.man.path} '>`;
-	// pic2.innerHTML = `<img src= ${images.wizard.path} '>`;
-	// pic3.innerHTML = `<img src= ${images.beast.path} '>`;
 
-	for (property in images) {
-		console.log(property);
-	}
+
+
 
 	document.getElementById('image-container').innerHTML += `
-		<div class = 'column'>
-			<img
-				src = ${images.man.path}
-				class = 'image'
-				id = ${images.man.heading}
-				style = 'width:100%'
+		<div class = 'image-column'>
+			<img src = ${images.man.path} class = 'image' style = 'width:100%'
+
 			>
+
+			<div class='image-text' >
+				<h3>${images.man.heading}<h3>
+				<p>${images.man.description}<p>
+			<div>
 		</div>
 	`
 
 	document.getElementById('image-container').innerHTML += `
-		<div class = 'column'>
-			<img
-				src = ${images.wizard.path}
-				class = 'image'
-				style = 'width:100%'
-			>
+		<div class = 'image-column'>
+			<img src = ${images.wizard.path} class = 'image' style = 'width:100%'>
+
+			<div class='image-text'>
+				<h3>${images.wizard.heading}<h3>
+				<p>${images.wizard.description}<p>
+			<div>
+
+
 		</div>
+
 	`
 
 	document.getElementById('image-container').innerHTML += `
-		<div class = 'column'>
+		<div class = 'image-column'>
 			<img
 				src = ${images.beast.path}
 				class = 'image'
 				style = 'width:100%'
 			>
+
+			<div class='image-text'>
+				<h3>${images.beast.heading}<h3>
+				<p>${images.beast.description}<p>
+			<div>
 		</div>
 	`
 
 }
+
+
+
+
+	function showText(elem){
+		console.log(elem);
+	}
