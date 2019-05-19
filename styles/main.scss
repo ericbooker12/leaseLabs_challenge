@@ -2,6 +2,7 @@ $dark: #E3DFFF;
 $medium: #D3C0CD;
 $light: #B19994;
 $border-color: #E0DEDF;
+$leaseLab-blue: rgb(0,157,221);
 
 @import url(https://fonts.googleapis.com/css?family=Roboto&display=swap);
 
@@ -65,8 +66,30 @@ body {
 	.nav {
 		padding-left: 30px;
 	}
+}
 
-
+.column {
+	position: relative;
+	float: left;
+	width: 20%;
+	margin: 5px;
+	border: 1px solid $leaseLab-blue;
+	height: 150px;
+	overflow: hidden;
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

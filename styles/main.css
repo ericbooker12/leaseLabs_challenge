@@ -39,4 +39,13 @@ body {
   .sidebar .nav {
     padding-left: 30px; }
 
+.column {
+  position: relative;
+  float: left;
+  width: 20%;
+  margin: 5px;
+  border: 1px solid #009ddd;
+  height: 150px;
+  overflow: hidden; }
+
 /*# sourceMappingURL=main.css.map */

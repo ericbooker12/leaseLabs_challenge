@@ -26,8 +26,39 @@ window.onload = () => {
 	// pic2.innerHTML = `<img src= ${images.wizard.path} '>`;
 	// pic3.innerHTML = `<img src= ${images.beast.path} '>`;
 
-	document.getElementById('images').innerHTML += `<img src= ${images.man.path} class = "image">`
-	document.getElementById('images').innerHTML += `<img src= ${images.wizard.path} class = "image">`
-	document.getElementById('images').innerHTML += `<img src= ${images.beast.path} class = "image">`
+	for (property in images) {
+		console.log(property);
+	}
+
+	document.getElementById('image-container').innerHTML += `
+		<div class = 'column'>
+			<img
+				src = ${images.man.path}
+				class = 'image'
+				id = ${images.man.heading}
+				style = 'width:100%'
+			>
+		</div>
+	`
+
+	document.getElementById('image-container').innerHTML += `
+		<div class = 'column'>
+			<img
+				src = ${images.wizard.path}
+				class = 'image'
+				style = 'width:100%'
+			>
+		</div>
+	`
+
+	document.getElementById('image-container').innerHTML += `
+		<div class = 'column'>
+			<img
+				src = ${images.beast.path}
+				class = 'image'
+				style = 'width:100%'
+			>
+		</div>
+	`
 
 }
