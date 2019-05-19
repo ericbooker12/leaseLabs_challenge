@@ -24,10 +24,8 @@ let pic3 = document.getElementById('pic3');
 window.onload = () => {
 
 
-
-
 	document.getElementById('image-container').innerHTML += `
-		<div class = 'image-column'>
+		<div class = 'image-column' onmouseover='showText(this)'>
 			<img src = ${images.man.path} class = 'image' style = 'width:100%'
 
 			>
@@ -54,11 +52,13 @@ window.onload = () => {
 	`
 
 	document.getElementById('image-container').innerHTML += `
-		<div class = 'image-column'>
+		<div class = 'image-column' >
 			<img
 				src = ${images.beast.path}
 				class = 'image'
 				style = 'width:100%'
+
+
 			>
 
 			<div class='image-text'>
@@ -73,6 +73,14 @@ window.onload = () => {
 
 
 
-	function showText(elem){
-		console.log(elem);
+	 let showText = (elem) => {
+		var div = elem.querySelector('.image-text')
+		div.style.visibility = 'visible';
 	}
+
+
+
+
+
+
+

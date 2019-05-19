@@ -54,7 +54,6 @@ body {
 
 	#heading-1 {
 		color: $leaseLab-blue;
-
 	}
 
 	#heading-2 {
@@ -81,29 +80,27 @@ body {
 		border: 1px solid $leaseLab-blue;
 		height: 150px;
 		overflow: hidden;
-
-		img:hover {
-			visibility: visible;
+		:hover{
+			cursor: pointer;
 		}
 
+		.image-text{
+			position: absolute;
+			z-index: 999;
+			top: 10%;
+			bottom: 50%;
+			left: 25%;
+			right: 25%;
+			font-size: 1.5em;
+			color: $leaseLab-blue;
+			text-shadow: 1px #fff;
+			text-align: center;
+			visibility: hidden;
+
+		}
 
 	}
 
-
-
-	.image-text{
-		position: absolute;
-		top: 10%;
-		bottom: 50%;
-		left: 25%;
-		right: 25%;
-		font-size: 1.5em;
-		color: $leaseLab-blue;
-		text-shadow: 1px #fff;
-		text-align: center;
-		visibility: hidden;
-
-	}
 }
 
 
