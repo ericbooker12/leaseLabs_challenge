@@ -1,23 +1,42 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto&display=swap);
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 10px; }
+
 .page {
   display: grid;
-  grid-template-rows: 100px 2fr;
-  grid-template-columns: 1fr 2fr; }
+  grid-template-rows: 100px 100%;
+  grid-template-columns: 1fr 3fr;
+  background-color: #fff; }
 
 .header {
   grid-row: 1/2;
   grid-column-start: 1;
   grid-column-end: 3;
-  background-color: #D3C0CD; }
+  border-bottom: 1.2px solid #E0DEDF; }
   .header .header-right {
-    float: right; }
+    float: right;
+    padding-right: 30px; }
+    .header .header-right a {
+      text-decoration: none;
+      font-size: 1.3rem; }
 
 .content {
-  grid-column: 2/3;
-  background-color: #E3DFFF; }
+  grid-column: 2/4;
+  border-bottom: 1px solid #E0DEDF;
+  border-left: 1px solid #E0DEDF;
+  border-right: 1px solid #E0DEDF;
+  margin-top: 20px; }
 
 .sidebar {
   grid-column: 1/2;
-  grid-row: 2/3;
-  background-color: #B19994; }
+  grid-row: 2/3; }
+  .sidebar a {
+    text-decoration: none;
+    font-size: 1rem; }
+  .sidebar p {
+    font-size: 1.2rem; }
+  .sidebar .nav {
+    padding-left: 30px; }
 
 /*# sourceMappingURL=main.css.map */
