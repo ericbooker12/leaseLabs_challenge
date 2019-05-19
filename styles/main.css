@@ -1,5 +1,23 @@
-.image {
-  width: 100px;
-  height: 118px; }
+.page {
+  display: grid;
+  grid-template-rows: 100px 2fr;
+  grid-template-columns: 1fr 2fr; }
+
+.header {
+  grid-row: 1/2;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  background-color: #D3C0CD; }
+  .header .header-right {
+    float: right; }
+
+.content {
+  grid-column: 2/3;
+  background-color: #E3DFFF; }
+
+.sidebar {
+  grid-column: 1/2;
+  grid-row: 2/3;
+  background-color: #B19994; }
 
 /*# sourceMappingURL=main.css.map */
