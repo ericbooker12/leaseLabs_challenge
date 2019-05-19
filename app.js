@@ -22,7 +22,12 @@ let pic2 = document.getElementById('pic2');
 let pic3 = document.getElementById('pic3');
 
 window.onload = () => {
-	pic1.innerHTML = `<img src= ${images.man.path} '>`;
-	pic2.innerHTML = `<img src= ${images.wizard.path} '>`;
-	pic3.innerHTML = `<img src= ${images.beast.path} '>`;
+	// pic1.innerHTML = `<img src= ${images.man.path} '>`;
+	// pic2.innerHTML = `<img src= ${images.wizard.path} '>`;
+	// pic3.innerHTML = `<img src= ${images.beast.path} '>`;
+
+	document.getElementById('images').innerHTML += `<img src= ${images.man.path} class = "image">`
+	document.getElementById('images').innerHTML += `<img src= ${images.wizard.path} class = "image">`
+	document.getElementById('images').innerHTML += `<img src= ${images.beast.path} class = "image">`
+
 }
