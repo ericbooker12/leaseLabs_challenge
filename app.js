@@ -16,67 +16,36 @@ var images = {
 	}
 };
 
+let imageArray = [images.man, images.wizard, images.beast];
 
-let pic1 = document.getElementById('pic1');
-let pic2 = document.getElementById('pic2');
-let pic3 = document.getElementById('pic3');
+// console.log(typeof items);
+
 
 window.onload = () => {
 
+	for (let image of imageArray) {
+		document.getElementById('image-container').innerHTML += `
+			<div class = 'image-column' onmouseover='showText(this)' onmouseout='removeText(this)'>
+				<img src = ${image.path} class = 'image' style = 'width:100%' >
 
-	document.getElementById('image-container').innerHTML += `
-		<div class = 'image-column' onmouseover='showText(this)'>
-			<img src = ${images.man.path} class = 'image' style = 'width:100%'
-
-			>
-
-			<div class='image-text' >
-				<h3>${images.man.heading}<h3>
-				<p>${images.man.description}<p>
-			<div>
-		</div>
-	`
-
-	document.getElementById('image-container').innerHTML += `
-		<div class = 'image-column'>
-			<img src = ${images.wizard.path} class = 'image' style = 'width:100%'>
-
-			<div class='image-text'>
-				<h3>${images.wizard.heading}<h3>
-				<p>${images.wizard.description}<p>
-			<div>
-
-
-		</div>
-
-	`
-
-	document.getElementById('image-container').innerHTML += `
-		<div class = 'image-column' >
-			<img
-				src = ${images.beast.path}
-				class = 'image'
-				style = 'width:100%'
-
-
-			>
-
-			<div class='image-text'>
-				<h3>${images.beast.heading}<h3>
-				<p>${images.beast.description}<p>
-			<div>
-		</div>
-	`
-
+				<div class='image-text' >
+					<h3>${image.heading}<h3>
+					<p>${image.description}<p>
+				<div>
+			</div>
+		`
+	}
 }
 
+let showText = (elem) => {
+	let div = elem.querySelector('.image-text')
+	div.style.visibility = 'visible';
+}
 
-
-
-	 let showText = (elem) => {
-		var div = elem.querySelector('.image-text')
-		div.style.visibility = 'visible';
-	}
+let removeText = (elem) => {
+	let div = elem.querySelector('.image-text')
+	div.style.visibility = 'hidden';
+}
 
 
 
