@@ -12,53 +12,64 @@ body {
 .header {
   grid-row: 1/2;
   grid-column-start: 1;
-  grid-column-end: 3;
+  grid-column-end: 5;
   border-bottom: 1.2px solid #E0DEDF; }
   .header .header-right {
     float: right;
-    padding-right: 30px; }
+    padding-right: 30px;
+    padding-bottom: 20px; }
     .header .header-right a {
       text-decoration: none;
       font-size: 1.5em;
       padding: 20px; }
+  .header img {
+    padding-left: 20px;
+    padding-top: 20px; }
 
 .content {
-  grid-column: 2/4;
-  border-bottom: 1px solid #E0DEDF;
+  grid-column: 2/5;
   border-left: 1px solid #E0DEDF;
   border-right: 1px solid #E0DEDF;
   padding: 20px;
   margin-top: 20px;
   margin-left: 20px; }
   .content #heading-1 {
+    font-size: 1.5rem;
     color: #009ddd; }
   .content #heading-2 {
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-style: italic;
     font-weight: bold;
     margin-left: 20px; }
+  .content p {
+    font-size: 1.2em; }
   .content .image-column {
+    background-color: #009ddd;
     position: relative;
     float: left;
     width: 30%;
     margin: 5px;
     border: 1px solid #009ddd;
-    height: 150px;
+    height: 140px;
     overflow: hidden; }
     .content .image-column :hover {
-      cursor: pointer; }
-    .content .image-column .image-text {
-      position: absolute;
-      z-index: 999;
-      top: 10%;
-      bottom: 50%;
-      left: 25%;
-      right: 25%;
-      font-size: 1.5em;
-      color: #009ddd;
-      text-shadow: 1px #fff;
-      text-align: center;
-      visibility: hidden; }
+      cursor: pointer;
+      opacity: .35;
+      transition: .25s ease-in; }
+
+.image-text {
+  position: absolute;
+  top: 10%;
+  bottom: 50%;
+  left: 25%;
+  right: 25%;
+  font-size: 1.5em;
+  color: #000;
+  text-shadow: 1px #fff;
+  text-align: center;
+  visibility: hidden; }
+  .image-text :hover {
+    opacity: 1; }
 
 .sidebar {
   grid-column: 1/2;

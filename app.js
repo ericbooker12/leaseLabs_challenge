@@ -18,32 +18,33 @@ var images = {
 
 let imageArray = [images.man, images.wizard, images.beast];
 
-// console.log(typeof items);
-
-
 window.onload = () => {
 
 	for (let image of imageArray) {
 		document.getElementById('image-container').innerHTML += `
 			<div class = 'image-column' onmouseover='showText(this)' onmouseout='removeText(this)'>
+
 				<img src = ${image.path} class = 'image' style = 'width:100%' >
 
-				<div class='image-text' >
+				<div class='image-text'>
 					<h3>${image.heading}<h3>
 					<p>${image.description}<p>
 				<div>
+
 			</div>
 		`
 	}
+
+	document.getElementById('logo').innerHTML = "<img src='images/leaselabs_logo_fullstack_rgb.png' class='logo-image'>"
 }
 
-let showText = (elem) => {
-	let div = elem.querySelector('.image-text')
+let showText = (element, x) => {
+	let div = element.querySelector('.image-text')
 	div.style.visibility = 'visible';
 }
 
-let removeText = (elem) => {
-	let div = elem.querySelector('.image-text')
+let removeText = (element) => {
+	let div = element.querySelector('.image-text')
 	div.style.visibility = 'hidden';
 }
 
